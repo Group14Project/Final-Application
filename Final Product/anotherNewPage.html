@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dished-Out</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Berkshire Swash' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+		<link href="css/anotherNewPage.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="navbar">
+	  	<div class="dropdown">
+	    	<button class="dropbtn" onclick="TablesFunction()">Tables
+	      		<i class="fa fa-caret-down"></i>
+	    	</button>
+	    	<div class="dropdown-content" id="myDropdown">
+	      		<h3>How Many Tables</h3>
+	      		<input id="tableCount" placeholder="Table Count"><br><br>
+	      		<button id="subTabCount">Click</button><br><br>
+	    	</div>
+
+
+
+	    	<button class="enterbtn" onclick="EntriesFunction()">Enter Items
+	      		<i class="fa fa-caret-down"></i>
+	    	</button>
+	    	<div class="enter-dropdown-content" id="myEnterDropdown">
+	      		<h3>Add Items</h3>
+	      		<input list="browse" id="choice" placeholder="Course"><br><br>
+				<input type="text" id="name" placeholder="Food"><br><br>
+				
+				<datalist id="browse">
+					<option value="starter">
+					<option value="main">
+					<option value="dessert">
+				</datalist>
+				<input type="text" id="price" placeholder="Price"><br><br>
+				<input type="submit" name="Enter" value="Enter" id="but"><br><br>
+	    	</div>
+	  	</div> 
+	  	<div id="messageOfInfo">
+			<div id="themessage">
+				 <marquee id="thisThing" behavior="scroll" direction="left" scrollamount="13">WELCOME! ADD TABLES AND ENTER NEW MENU ITEMS FROM THE DROPDOWNS ON THE LEFT</marquee>
+			</div>
+		</div>
+	  	<div id="currentUserLoggedIn"></div>
+	</div>
+	
+	<div>
+		<div id="thediv">
+			<div id="move"></div>
+			<div class="docket">
+				<div class='docketHeader'>
+					<div class="listen"><h4>STARTERS</h4></div>
+					<div class='logo'>D</div>
+					<div class='blank'><h4>STARTERS</h4></div>
+				</div>
+				<ul id="starter"></ul>
+			</div>
+			<div class="docket">
+				<div class='docketHeader'>
+					<div class="listen"><h4>MAINS</h4></div>
+					<div class='logo'>D</div>
+					<div class='blank'><h4>MAINS</h4></div>
+				</div>
+				<ul id="main"></ul>
+			</div>
+			<div class="docket">
+				<div class='docketHeader'>
+					<div class="listen"><h4>DESSERTS</h4></div>
+					<div class='logo'>D</div>
+					<div class='blank'><h4>DESSERTS</h4></div>
+				</div>
+				<ul id="dessert"></ul>
+			</div>
+		</div>
+	</div>
+	</body>
+
+	<!-- initialise firebase -->
+	<script src="js/anotherNewPage.js"></script>
+	
+</html>

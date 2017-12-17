@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dished-Out</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Berkshire Swash' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Spectral SC' rel='stylesheet'>
+		<link href="css/newPage.css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="container">
+			<!-- create a docket holder navbar for use if needed -->
+			<div id="navbar">
+				<div id="messageOfInfo">
+					<div id="themessage">
+						<marquee id="thisThing" behavior="scroll" direction="left" scrollamount="12">WELCOME! CHOOSE YOUR TABLE NUMBER, CURRENT COURSE AND SELECT ITEMS FROM THE MENU</marquee>
+					</div>
+				</div>
+				<div id="currentUserLoggedIn"></div>
+			</div>
+			<!-- menu displayed within, a docket for each course -->
+			<div id="contentsBar">
+				<!-- instances of dockets for starters, mains and desserts -->
+				<div class="theDocket">
+					<div class='docketHeader'>
+						<div class="listen"><h3>STARTERS</h3></div>
+						<div class='logo'>D</div>
+						<div class='blank'><h3>STARTERS</h3></div>
+					</div>
+					<div class="Docket">
+						<ul id="retrieved_starter_menu"></ul>
+					</div>
+				</div>
+				<div class="theDocket">
+					<div class='docketHeader'>
+						<div class="listen"><h3>MAINS</h3></div>
+						<div class='logo'>D</div>
+						<div class='blank'><h3>MAINS</h3></div>
+					</div>
+					<div class="Docket">
+						<ul id="retrieved_main_menu"></ul>
+					</div>
+				</div>
+				<div class="theDocket">
+					<div class='docketHeader'>
+						<div class="listen"><h3>DESSERTS</h3></div>
+						<div class='logo'>D</div>
+						<div class='blank'><h3>DESSERTS</h3></div>
+					</div>
+					<div class="Docket">
+						<ul id="retrieved_dessert_menu"></ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- show the customers order -->
+			<div id="direct">
+				<!-- select the table that is ordering. Create on demand totals -->
+				<select id="selection" placeholder="Tables"></select>
+				<!-- selection of course for current table -->
+				<select id="courseSelection" placeholder="Tables">
+					<option value="starter">Starter</option>
+					<option value="main">Main</option>
+					<option value="dessert">Dessert</option>
+				</select>
+				<!-- display items that table has ordered. Display total price of order -->
+				<div id="outerOrder">
+					<div id="orderDisplayed">
+						<ul id="starter_docket"></ul>
+						<ul id="main_docket"></ul>
+						<ul id="dessert_docket"></ul>
+					</div>
+					<div id="totalPrice" value="0.00">0.00</div>
+				</div>
+				<!-- order button -->
+				<button id="sendDocket">Order</button>
+			</div>
+		</div>
+	</body>
+
+	<!-- initialise firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+	<script src="js/newPage.js"></script>
+</html>

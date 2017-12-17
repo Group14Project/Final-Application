@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dished-Out</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='https://fonts.googleapis.com/css?family=Berkshire Swash' rel='stylesheet'>
+	    <link href='https://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet'> 
+	    <link href='https://fonts.googleapis.com/css?family=Spectral SC' rel='stylesheet'>
+	    <link href="css/login.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="navbar">
+				<div id="messageOfInfo">
+					<div id="themessage">
+						<marquee id="thisThing" behavior="scroll" direction="left" scrollamount="13">NEED A PLACE TO ORGANISE YOUR RESTAURANTS DOCKETS? DISHED OUT IS HERE TO SERVE YOU!</marquee>
+					</div>
+				</div>
+				
+				<div id="usernameContainer"></div>
+			</div>
+			<div id="contentsBar">
+				<div id="contents"></div>
+
+				<!-- log in div -->
+				<div id="currentUser">
+					<div id="header">DishedOut</div>
+					<div id='docketHeader'>
+	                    <div id="listen1"><h3>LOGIN</h3></div>
+	                    <div id='logo'>D</div>
+	                    <div id='blank1'><h3>SIGNUP</h3></div>
+	                </div><br>
+	                <span>Email</span><br>
+	                <input class="allInputs" type="email" id="username" placeholder="Email"><br>
+	                <!-- <input class="allInputs" id="uname" type="text" placeholder="Email"><br> -->
+	                <span>Password</span><br>
+	                <input class="allInputs" type="password" id="password" placeholder="Password"><br><br>
+	                <span id="forgotPassword" onclick="why()"><u>Forgot Password?</u></span><br>
+					<!-- <input class="allInputs" id="pass" type="password" placeholder="Password"><br> -->
+					<!-- <input class="theButtons" id="in" type="submit" value="Log In"> -->
+					<button class="theButtons" id="login">Login</button>
+				</div>
+
+				<!-- sign up div -->
+				<div id="newUser">
+					<div id="header">DishedOut</div>
+					<div id='docketHeader'>
+	                    <div id="listen2"><h3>LOGIN</h3></div>
+	                    <div id='logo'>D</div>
+	                    <div id='blank2'><h3>SIGNUP</h3></div>
+	                </div><br>
+	                <span>Company Name</span><br>
+	                <input class="allInputs" id="company" type="text" placeholder="Company"><br>
+	                <span>Email</span><br>
+	                <input class="allInputs" id="uname" type="email" placeholder="Email"><br>
+	                <span>Password</span><br>
+					<input class="allInputs" id="pass" type="password" placeholder="Password"><br>
+					<button class="theButton2" id="sendInfo">Sign Up</button>
+					<!-- <input class="theButtons" id="up" type="submit" value="Sign Up"> -->
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+	<script src="js/login.js" type="text/javascript"></script>
+	
+</html>
